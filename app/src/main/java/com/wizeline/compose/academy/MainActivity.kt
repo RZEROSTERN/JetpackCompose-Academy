@@ -11,33 +11,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
+import com.wizeline.compose.academy.ui.views.Landing
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeAcademyTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+                Landing()
             }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     ComposeAcademyTheme {
-        Greeting("Android")
+        Landing()
     }
 }
